@@ -1,0 +1,145 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white relative font-sans h-screen overflow-hidden;
+  }
+}
+
+@layer components {
+  .introducing-container {
+    @apply rounded-[20px];
+    background: linear-gradient(45deg, #9657de, #383abe, #389ec3, #5248c4, #9657de);
+    z-index: -1;
+  }
+
+  .contract-button {
+    box-shadow: inset 4px 4px 7px rgba(24, 29, 20, 0.25);
+    transition-duration: 0.3s;
+  }
+
+  .contract-button:hover {
+    box-shadow: inset 0px 10px 20px rgba(85, 68, 158, 0.7);
+  }
+}
+
+@layer utilities {
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle at 50% 70%, var(--tw-gradient-stops));
+  }
+} */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white relative font-sans min-h-screen overflow-x-hidden;
+  }
+  
+  /* Improved container sizing */
+  .container {
+    @apply mx-auto px-4 md:px-8;
+  }
+}
+
+@layer components {
+  /* Grid layout for profile section */
+  .profile-section {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-8;
+  }
+  
+  /* Profile content styles */
+  .profile-content {
+    @apply flex flex-col gap-4;
+  }
+  
+  /* Image container with proper positioning */
+  .profile-image-container {
+    @apply relative flex justify-center items-center max-w-full;
+  }
+  
+  /* Developer title overlay */
+  .developer-title {
+    @apply absolute bottom-[10%] left-0 right-0 text-center z-10;
+  }
+  
+  .introducing-container {
+    @apply rounded-[20px];
+    background: linear-gradient(45deg, #9657de, #383abe, #389ec3, #5248c4, #9657de);
+    z-index: -1;
+  }
+  
+  .contract-button {
+    box-shadow: inset 4px 4px 7px rgba(24, 29, 20, 0.25);
+    transition-duration: 0.3s;
+  }
+  
+  .contract-button:hover {
+    box-shadow: inset 0px 10px 20px rgba(85, 68, 158, 0.7);
+  }
+  
+  /* Header with spacing */
+  .header {
+    @apply flex justify-between items-center py-6 px-4 md:px-8;
+  }
+  
+  /* Navigation buttons */
+  .nav-button {
+    @apply inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-full font-bold my-4;
+  }
+  
+  /* Profile title styling */
+  .profile-title {
+    @apply text-4xl md:text-5xl font-bold text-purple-400 mb-4;
+  }
+  
+  /* Improved text readability */
+  .profile-text {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+  
+  /* Skills listing with better spacing */
+  .profile-skills {
+    @apply text-sm md:text-base leading-relaxed text-gray-300;
+  }
+  
+  /* Developer headline text */
+  .dev-headline {
+    @apply text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg m-0;
+  }
+  
+  .dev-subheadline {
+    @apply text-base md:text-xl font-medium text-white drop-shadow-md mt-2;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle at 50% 70%, var(--tw-gradient-stops));
+  }
+  
+  /* New utilities to help with layout */
+  .no-overflow {
+    @apply overflow-hidden;
+  }
+  
+  .responsive-pad {
+    @apply py-4 md:py-8 lg:py-12;
+  }
+  
+  /* Fix for potential z-index issues */
+  .z-high {
+    @apply z-20;
+  }
+  
+  .z-mid {
+    @apply z-10;
+  }
+  
+  .z-low {
+    @apply z-0;
+  }
+}
